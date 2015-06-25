@@ -41,7 +41,7 @@ module.exports = {
   	plugins: [
   	    new HtmlWebpackPlugin({
 			template: path.join(srcDir, 'index.html'),
-			bundlePath: 'http://localhost:8080',
+			assetPath: 'http://localhost:8080',
 			filename: 'index.html'
 		}),
   		new ExtractTextPlugin('[name].css')

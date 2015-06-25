@@ -13,7 +13,7 @@ Server files are contained in `server/`.
 ## Running dev server
 !! Probably a better way to handle this but havem't had time to figure it out yet, pull requests welcome.
 
-1. Run `npm frontend-dev-build`, this should copy index.html and other static files to the dist folder where the node server will be looking for static assets.
+1. Run `npm frontend-dev-build`, this will copy index.html to the dist folder for express to mount.
 
 2. Run `npm frontend-dev-server`
 
@@ -27,14 +27,15 @@ After doing this you are free to run your node server without the separate dev s
 ## Caveats
 
 ### Static files
-Unfortunately any change to non js static files will require an `npm frontend-dev-build`.
+- Paths to static files should be prefixed with `{%=o.htmlWebpackPlugin.options.assetPath%}`
+- Changes to index.html will require an `npm-frontend-dev-build` to be reflected.
 
 ### Ports
-Haven't yet implemented env based ports.
 The frontend server and the node server have to run on different ports in development.
 
 To change the ports for the frontend server please go to:
-`/frontend/webpack.config.dev.js` and change output.public path to your preferred url (must be absolute).  
+`/frontend/webpack.config.dev.js` and replace any instance of http://localhost:8080 with the path to your preferred url (must be full url).
+
 You will also need to change the path specified in the index.html file for bundle.js to match it.
 
 To change port for the express server run with PORT=YOUR-PORT-HERE npm run server

@@ -35,7 +35,7 @@ module.exports = {
   	plugins: [
   	    new HtmlWebpackPlugin({
 			template: path.join(srcDir, 'index.html'),
-			bundlePath: '',
+			assetPath: '',
 			filename: 'index.html',
 			minify: true
 		}),
