@@ -1,4 +1,4 @@
-# Minimal Webpack React/Babel Boilerplate
+# Node(express) React/Babel Boilerplate
 
 ## Setup
 `cd ./node-react-babel-stack`,
