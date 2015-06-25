@@ -19,5 +19,24 @@ Server files are contained in `server/`.
 
 3. Run `npm server` or `npm server-watch` (included nodemon).
 
+## Running production build
+`npm run`
+
 ## Caveats
+
+### Static files
 Unfortunately any change to non js static files will require an `npm frontend-dev-build`.
+
+### Ports
+Haven't yet implemented env based ports.
+The frontend server and the node server have to run on different ports in development.
+
+To change the ports for the frontend server please go to:
+`/frontend/webpack.config.dev.js` and change output.public path to your preferred url (must be absolute).  
+You will also need to change the path specified in the index.html file for bundle.js to match it.
+
+To change port for the express server run with PORT=YOUR-PORT-HERE npm run server
+
+
+
+

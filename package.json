@@ -7,7 +7,8 @@
     "server": "babel-node --stage 0 ./server/index.js",
     "server-watch": "nodemon --exec babel-node --stage 0 -- ./server/index.js",
     "frontend-dev-server": "webpack-dev-server --hot --config ./frontend/webpack.config.dev.js",
-    "frontend-dev-build": "BUILD_DEV=1 webpack --progress --colors --config ./frontend/webpack.config.dev.js"
+    "frontend-dev-build": "webpack --progress --colors --config ./frontend/webpack.config.dev.js",
+    "frontend-prod-build": "webpack --progress --colors --config ./frontend/webpack.config.prod.js"
   },
   "repository": {
     "type": "git",

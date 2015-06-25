@@ -9,17 +9,11 @@ var entryFile = path.join(__dirname, '/src/js/index.js');
 module.exports = {
 	progress: true,
 	colors: true,
-  	entry: ['webpack/hot/dev-server', entryFile],
+  	entry: [entryFile],
   	output: {
   		path: outputDir,
-  		publicPath: 'http://localhost:8080/',
   		filename: 'bundle.js'
   	},
-	devServer: {
-		contentBase: outputDir,
-		inline: true,
-		colors: true
-	},
   	devtool: 'source-map',
   	module: {
   		loaders: [
@@ -41,8 +35,9 @@ module.exports = {
   	plugins: [
   	    new HtmlWebpackPlugin({
 			template: path.join(srcDir, 'index.html'),
-			bundlePath: 'http://localhost:8080',
-			filename: 'index.html'
+			bundlePath: '',
+			filename: 'index.html',
+			minify: true
 		}),
   		new ExtractTextPlugin('[name].css')
   	]
