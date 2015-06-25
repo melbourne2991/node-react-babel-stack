@@ -22,6 +22,8 @@ Server files are contained in `server/`.
 ## Running production build
 `npm run frontend-prod-build`
 
+After doing this you are free to run your node server without the separate dev server, it will just grab the bundle from the dist folder.
+
 ## Caveats
 
 ### Static files
