@@ -20,7 +20,7 @@ Server files are contained in `server/`.
 3. Run `npm server` or `npm server-watch` (included nodemon).
 
 ## Running production build
-`npm run`
+`npm run frontend-prod-build`
 
 ## Caveats
 
