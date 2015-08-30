@@ -7,17 +7,20 @@
 `cd ./server`
 `npm install`
 
+`cd ./frontend`
+`npm install`
+
 Frontend files are contained in the `frontend/src` directory.
 Server files are contained in `server/`.
 
 ## Running dev server
 !! Probably a better way to handle this but havem't had time to figure it out yet, pull requests welcome.
 
-1. Run `npm frontend-dev-build`, this will copy index.html to the dist folder for express to mount.
+1. Run `npm run frontend-dev-build`, this will copy index.html to the dist folder for express to mount.
 
-2. Run `npm frontend-dev-server`
+2. Run `npm run frontend-dev-server`
 
-3. Run `npm server` or `npm server-watch` (included nodemon).
+3. Run `npm run server` or `npm server-watch` (included nodemon).
 
 ## Running production build
 `npm run frontend-prod-build`
